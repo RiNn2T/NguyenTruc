@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> Buoi 01 </title>
+    </head>
+    <body>
+        <h1> HTML Basic Examples</h1>
+        <p><strong>HTML document</strong></p>
+        <p> All HTML documents must start with a document type declaration: <!DOCTYPE html>.</p>
+        <p> The HTML document itself begins with <html> and ends with </html></p>
+        <p> The visible part of the HTML document is between <body> and </body></p>
+        <p><ins> Example <br/></ins></p>
+            <!DOCTYPE html>
+            <html lang="vi">
+                <body>
+                    <em>Bài Tập Thực Hành 1</em>
+                    <p>Bài tập thực hành không khó chỉ cần bạn chăm chỉ.</p>
+                </body>
+            </html>
+        <p><strong>The <!DOCTYPE> Declaration</strong></p>
+        <p> The <!DOCTYPE> declaration represents the document type, and helps browsers to display web pages correctly.</p>
+        <p> It must only appear once, at the top of the page.</p>
+        <p> The <!DOCTYPE> declaration is not case sensitive.</p>
+        <p> The <!DOCTYPE> declaration for HTML5 is:<br/>
+            <!DOCTYPE html></p>
+        <p><strong>HTML Headings</strong></p>
+        <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt;tags.</p>
+        <p>&lt;h1&gt; defines the most important heading. &lt;h6&gt; defines the leasst important heading:</p>
+        <p><ins>Example<br/></ins>
+            <h2>This is heading 1</h2>
+            <h3>This is heading 2</h3>
+            <h4>This is heading 3</h4>
+        </p>
+        <p><strong>HTML Paragraphs</strong></p>
+        <p>HTML paragraphs are defined with the &lt;p&gt; tag:</p>
+        <p><ins>Example<br/></ins>
+            <p>Thẻ này chưa có nội dung</p>
+            <p>Thẻ này cũng chưa được viết nội dung</p>
+        </p>
+        <p><strong>HTML Links</strong></p>
+        <p>HTML links are dèined with the &lt;a&gt; tag</p>
+        <p><ins>Example<br/></ins>
+            <a href="https://www.facebook.com/2t.rinn">Đây là trang cá nhân facebook của tôi</a>
+        </p>
+        <p>The link's destination is specified in the href attribute.</p>
+        <p>Attributes are used to provide addition information about HTML elements.</p>
+        <p>You will learn more about attributes in a later chapter</p>
+        <p><strong>HTML Images</strong></p>
+        <p>HTML images are defined with the <img> tag.</p>
+        <p>The source file (src), alternative text (alt), wigth, and height are provided as attributes:</p>
+        <p><ins>Example<br/></ins>
+            <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">
+        </p>
+        <p><strong> How to View HTML Source</strong></p>
+        <p>Have you ever seen a Web page and wondered "Hey! How did they do that?"</p>
+        <p><strong>View HTML Source Code:<br/></strong>
+            Click CTRL + U in an HTML page, or right-click on the page and select "View Page Source". This will open a new tab containing the HTML source code of the page.
+        <p><strong>Inspect an HTML Element:<br/></strong>
+            Right-click on an element (or a blank area), and choose "Inspect" to see what elements are made up of (you will see both the HTML and the CSS). You can also edit the HTML or CSS on-the-fly in the Elements or Styles panel that opens.
+        </p>
+        </p>
+    </body>
+    <body>
+        <h1>HTML Elements</h1>
+        <p><strong>HTML Elements</strong></p>
+        <p>The HTML element is everything from the start tag to the end tag:</p>
+        &lt;tagname&gt;Content goes here...<br/>
+        &lt;/tagname&gt;
+        <p><ins>Example<br/></ins>
+            &lt;h1&gt;My First Heading&lt;/h1&gt;<br/>
+            &lt;p&gt;My first paragraph.&lt;/p&gt;
+        </p>
+        <p>Note:Some HTML elements have no content (like the <br> element). These elements are called empty elements. Empty elements do not have an end tag!</p>
+        <p><strong> Nested HTML Elements</strong></p>
+        <p>HTML elements can be nested (this means that elements can contain other elements).<br/>
+            All HTML documents consist of nested HTML elements.<br/>
+            The following example contains four HTML elements<br/>
+            (&lt;html&gt;, &lt;bodyl&gt; &lt;h1&gt; &lt;p&gt;):
+        </p>
+        <p><ins>Example<br/></ins>
+            <!DOCTYPE html>
+            <html lang="vi">
+                <body>
+                    <h4>Đây là báo dân chí HN</h4>
+                    <p>Tin tức hôm nay</p>
+                </body>
+            </html>
+        </p>
+        <p><strong>Example Explained</strong></p>
+        <p>The &lt;html&gt; element is the root element and it defines the whole HTML document.</p>
+        <p>It has a start tag &lt;html&gt; and an end tag &lt;/html&gt;.</p>
+        <p>Then, inside the &lt;html&gt; element there is a &lt;body&gt; element:</p>
+           <body>
+            <h4>Không có tiêu đề</h4>
+            <p>Không có tiêu đề nên khổng có nội dung</p>
+           </body>
+        <p>The &lt;body&gt; element defines a heading.</p>
+        <p>It has a stard tag &lt;body&gt; and an end tag &lt;/h1&gt;</p>
+        <p>Then, inside the &lt;body&gt; element there are two other elements: &lt;h1&gt; and &lt;p&gt;</p>
+        <p>...</p>
+        <p><strong> Never Skip the End Tag</strong></p>
+        <p>Some HTML elements will display correctly, even if you forget the end tag:</p>
+        <p><ins>Example</ins><br/>
+            <html>
+                <body>
+                    <p> Đây là đoạn văn bản đầu tiên</p>
+                    <p> Đây là đoạn văn bản tiếp theo</p>
+                </body>
+            </html>
+        </p>
+        <p><strong>However, never rely on this! Unexpected results and errors may occur if you forget the end tag!</strong></p>
+        <p><strong>Empty HTML Elements</strong></p>
+        <p>HTML elements with no content are called empty elements.</p>
+        <p>The &lt;br&gt; tag defines a line break, and is an empty element without a closing tag:</p>
+        <p><ins>Example<br/></ins></p>
+            <p>This is a <br> paragraph with a line break.</p>
+        <p><strong>HTML is Not Case Sensitive</strong></p>
+        <p>HTML tags are not case sensitive: &lt;P&gt; means the same as &lt;p&gt;.</p>
+        <p>The HTML standard does not require lowercase tags, but W3C <strong>recommends</strong> lowercase in HTML, and <strong>demands</strong> lowercase for stricter document types like XHTML.</p>
+        <p><strong>HTML Tag Reference</strong></p>
+        <p>W3Schools' tag reference contains additional information about these tags and their attributes.</p>
+    </body>
+    <body>
+        <h1>HTML Attributes</h1>
+        <p>HTML attributes provide additional information about HTML elements.</p>
+        <p><strong>HTML Attributes</strong></p>
+        <p>
+            - All HTML elementcan have <b> attributes</b><br/>
+            - Attributes provide <b>additional information</b> about elements.<br/>
+            - Attributes are always specified in <b>the star tag</b><br/>
+            - Attributes usually come in nam/value pái like: <b>name="value"</b>
+        </p>
+        <p><strong>The href Attribute</strong></p>
+        <p>The &lt;a&gt; tag defines a hyperlink. The href attribute specifies the URL of the page the link goes to:</p>
+        <p><ins>Example<br/></ins>
+            <a href="https://www.w3schools.com">Visit W3Schools</a>
+        </p>
+        <p><strong>The src Attribute</strong></p>
+        <p>The &lt;img&gt; tag is used to embed an image in an HTML page. The src attribute specifies the path to the image to be displayed:</p>
+        <p><ins>Example<br/></ins>
+            <img src="img_girl.jpg">
+        </p>
+        <p>There are two ways to specify the URL in the src attribute:</p>
+        <p><b>1. Absolute URL</b> - Links an external image that is hosted on another website</p>
+        <p><b>Notes:</b> External images might be under copyright. If you do not get permission to use it, you may be in violation of copyright laws. In addition, you cannot control external images; it can suddenly be removed or changed.</p>
+        <p><b>2. Relative URL</b> - Links to an image that is hosted within the website. Here, the URL does not include the domain name. If the URL begins without a slash, it will be relative to the current page. Example: src="img_girl.jpg". If the URL begins with a slash, it will be relative to the domain.</p>
+        <p><b>Tip:</b> It is almost always best to use relative URLs. They will not break if you change domain.</p>
+        <p><strong>The width and height Attributes</strong></p>
+        <p>The &lt;img&gt; tag tag should also contain the width and height attributes, which specify the width and height of the image (in pixels):</p>
+        <p><ins>Example<br/></ins>
+            <img src="img_girl.jpg" width="500" height="600">
+        </p>
+        <p><strong>The alt Attribute</strong></p>
+        <p>The required alt attribute for the &lt;img&gt; tag specifies an alternate text for an image, if the image for some reason cannot be displayed. This can be due to a slow connection, or an error in the src attribute, or if the user uses a screen reader.</p>
+        <p><ins>Example<br/></ins>
+            <img src="img_girl.jpg" alt="Girl with a jacket">
+            <img src="img_typo.jpg" alt="Girl with a jacket">
+        </p>
+        <p><strong>The style Attribute</strong></p>
+        <p>The style attribute is used to add styles to an element, such as color, font, size, and more.</p>
+        <p><ins>Example<br/></ins>
+            <p style="color:red;">This is a red paragraph.</p>
+        </p>
+        <p><strong>The lang Attribute</strong></p>
+        <p>You should always include the lang attribute inside the &lt;html&gt; tag, to declare the language of the Web page. This is meant to assist search engines and browsers.<br/>The following example specifies English as the language</p>
+    </body>
+    <body>
+        <h1>HTML Headings</h1>
+        <p>HTML headings are titles or subtitles that you want to display on a webpage.</p>
+        <p><ins>Example<br/></ins>
+            <h2>Heading 1</h2>
+            <h3>Heading 2</h3>
+            <h4>Heading 3</h4>
+            <h5>Heading 4</h5>
+            <h6>Heading 5</h6>
+            <h7>Heading 6</h7>
+        </p>
+        <p>HTML Headings</p>
+        <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags.</p>
+        <p>&lt;h1&gt; defines the most important heading. &lt;h6&gt; defines the least important heading.</p>
+        <p><ins>Example<br/></ins>
+            <h2>Heading 1</h2>
+            <h3>Heading 2</h3>
+            <h4>Heading 3</h4>
+            <h5>Heading 4</h5>
+            <h6>Heading 5</h6>
+            <h7>Heading 6</h7>
+        </p>
+        <p><strong>Headings Are Important</strong></p>
+        <p>Search engines use the headings to index the structure and content of your web pages.</p>
+        <p>Users often skim a page by its headings. It is important to use headings to show the document structure.</p>
+        <p>&lt;h1&gt; headings should be used for main headings, followed by &lt;h2&gt; headings, then the less important &lt;h3&gt;, and so on.</p>
+        <p><strong>Bigger Headings</strong></p>
+        <p>Each HTML heading has a default size. However, you can specify the size for any heading with the style attribute, using the CSS font-size property:</p>
+        <p><ins>Example<br/></ins>
+            <h1 style="font-size:60px;">Heading 1</h1>
+        </p>
+        <p><strong>HTML Tag Reference</strong></p>
+        <p>W3Schools' tag reference contains additional information about these tags and their attributes.</p>
+    </body>
+    <body>
+        <h1>HTML Paragraphs</h1>
+        <p><strong>HTML Paragraphs</strong></p>
+        <p>The HTML &lt;p&gt; element defines a paragraph.</p>
+        <p>A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.</p>
+        <p><strong>HTML Display</strong></p>
+        <p>You cannot be sure how HTML will be displayed.</p>
+        <p>Large or small screens, and resized windows will create different results.</p>
+        <p>With HTML, you cannot change the display by adding extra spaces or extra lines in your HTML code.</p>
+        <p>The browser will automatically remove any extra spaces and lines when the page is displayed:</p>
+        <p><ins>Example<br/></ins>
+            <p>
+                This paragraph
+                contains a lot of lines
+                in the source code,
+                but the browsers
+                ignores it.
+                </p>
+                
+                <p>
+                This paragraph
+                contains         a lot of spaces
+                in the source         code,
+                but the        browser
+                ignores it.
+                </p>
+        </p>
+        <p><strong>HTML Horizontal Rules</strong></p>
+        <p>The &lt;hr&gt; tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.</p>
+        <p>The &lt;hr&gt; element is used to separate content (or define a change) in an HTML page:</p>
+        <p>The &lt;hr&gt; tag is an empty tag, which means that it has no end tag.</p>
+        <p><strong>HTML Line Breaks</strong></p>
+        <p>The HTML &lt;br&gt; element defines a line break.</p>
+        <p>Use &lt;br&gt; if you want a line break (a new line) without starting a new paragraph:</p>
+        <p><strong>Solution - The HTML &lt;pre&gt; Element</strong></p>
+        <p>The HTML &lt;pre&gt; element defines preformatted text.</p>
+        <p>The text inside a &lt;pre&gt; element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks:</p>
+        <p><ins>Example<br/></ins>
+            <pre>
+                My Bonnie lies over the ocean.
+              
+                My Bonnie lies over the sea.
+              
+                My Bonnie lies over the ocean.
+              
+                Oh, bring back my Bonnie to me.
+              </pre>
+        </p>
+    </body>
+</html>
