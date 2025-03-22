@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ của tôi</title>
+</head>
+<body>
+    <h1>Buổi 1</h1>
+    <p><a href="Buổi 1 b1.html">Bài 1</a><br/>
+        <a href="Buổi 1 b2.html">Bài 2.1</a><br/>
+        <a href="Buổi 1 b2b.html">Bài 2.2</a><br/>
+        <a href="Buổi 1 b3.html">Bài 3</a>
+    </p>
+    <h1>Buổi 5</h1>
+    <p><a href="Bài 1.html">Bài 1</a><br/>
+        <a href="Bài 2.html">Bài 2</a>
+    </p>
+    <h1>Buổi 6</h1>
+    <p><a href="bài trên lớp b6.html">Bài 1</a><br/>
+        <a href="bài 1 b6 lab 6.html">Bài 1 lab 6</a><br/>
+        <a href="bài 2 b6 lab 6.html">Bài 2 lab 6</a>
+    </p>
+</body>
+</html>
