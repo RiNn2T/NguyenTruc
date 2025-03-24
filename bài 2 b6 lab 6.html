@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Mới</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .menu {
+            background: #0084ff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            color: white;
+            font-weight: bold;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background 0.3s;
+        }
+        .menu a:hover {
+            background: #005bb5;
+            border-radius: 5px;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            gap: 20px;
+        }
+        .main-news {
+            width: 65%;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .main-news img {
+            width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .main-news img:hover {
+            transform: scale(1.05);
+        }
+        .main-news h2 a {
+            text-decoration: none;
+            color: black;
+            transition: color 0.3s;
+        }
+        .main-news h2 a:hover {
+            color: #0084ff;
+        }
+        .sidebar {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .news-item {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s;
+        }
+        .news-item:hover {
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .news-item img {
+            width: 100px;
+            height: 80px;
+            margin-right: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .news-item:hover img {
+            transform: scale(1.1);
+        }
+        .news-item a {
+            text-decoration: none;
+            color: black;
+            transition: color 0.3s;
+        }
+        .news-item a:hover {
+            color: #0084ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="bài 2 b6 lab 6.html">Nóng</a>
+        <a href="https://baomoi.com/tin-moi.epi">Mới</a>
+        <a href="https://baomoi.com/tin-video.epi">Video</a>
+        <a href="https://baomoi.com/chu-de.epi">Chủ đề</a>
+    </div>
+    <div class="container">
+        <div class="main-news">
+            <img src="https://photo-baomoi.bmcdn.me/w700_r16x9/2025_03_22_119_51780442/cc2e839684d86d8634c9.jpg.avif">
+            <h2><a href="https://znews.vn/thu-tuong-yeu-cau-doanh-nghiep-nha-nuoc-but-pha-tang-truong-post1540088.html">Thủ tướng yêu cầu doanh nghiệp Nhà nước bứt phá tăng trưởng</a></h2>
+        </div>
+        <div class="main-news">
+            <img src="https://nld.mediacdn.vn/thumb_w/640/291774122806476800/2025/3/22/screenshot-2025-03-22-122356-1742621476078566151467.png">
+            <h2><a href="https://nld.com.vn/tong-thong-donald-trump-ra-lenh-moi-lien-quan-den-cac-doi-thu-chinh-tri-196250322123627471.htm">Tổng thống Donald Trump ra lệnh mới liên quan đến các đối thủ chính trị.</a></h2>
+        </div>
+        <div class="main-news">
+            <img src="https://suckhoedoisong.qltns.mediacdn.vn/thumb_w/640/324455921873985536/2025/3/22/gia-vang-ve-muc-nao-1742629409196143194696.jpg">
+            <h2><a href="https://suckhoedoisong.vn/gia-vang-se-tro-ve-dao-dong-tu-81-87-trieu-dong-luong-169250322144448027.htm">Giá vàng sẽ trở về dao động từ 81-87 triệu đồng/lượng?</a></h2>
+        </div>
+        <div class="sidebar">
+            <div class="news-item">
+                <img src="https://photo.znews.vn/w960/Uploaded/yqdlcqrwq/2025_03_22/15322032025.jpg" alt="Tổng Bí thư Tô Lâm phát biểu chỉ đạo tại đại hội. Ảnh: Xuân Trung.">
+                <a href="https://znews.vn/tong-bi-thu-phat-trien-quoc-gia-so-tren-du-lieu-dung-du-sach-song-post1540066.html">Tổng Bí thư: Phát triển quốc gia số trên dữ liệu 'đúng-đủ-sạch-sống'</a>
+            </div>
+            <div class="news-item">
+                <img src="https://image.nhandan.vn/w790/Uploaded/2025/genadhnatuhat/2025_03_22/5-9980-491.jpg.webp">
+                <a href="https://nhandan.vn/san-bay-noi-bai-du-kien-tiet-kiem-hon-4800kwh-trong-gio-trai-dat-post866962.html">Sân bay Nội Bài dự kiến tiết kiệm hơn 4.800kWh trong Giờ Trái đất'</a>
+            </div>   
+            <div class="news-item">
+                <img src="https://cdnmedia.baotintuc.vn/Upload/YfjSW8DWZtJKwKaxMsyNng/files/123Saudi.jpg">
+                <a href="https://baotintuc.vn/the-gioi/tong-thong-zelensky-tiet-lo-noi-dung-chinh-cuoc-dam-phan-myukraine-sap-toi-o-saudi-arabia-20250319212202923.htm">Tổng thống Zelensky tiết lộ nội dung chính cuộc đàm phán Mỹ-Ukraine sắp tới ở Saudi Arabia</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
