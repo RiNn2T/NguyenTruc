@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kiểm tra số chẵn/lẻ - Cách 2</title>
+</head>
+<body>
+    <script>
+        // Hàm kiểm tra chẵn/lẻ
+        function checkEvenOdd(number) {
+            return number % 2 === 0 ? `${number} là số chẵn` : `${number} là số lẻ`;
+        }
+
+        // Nhập số từ người dùng qua hộp thoại prompt
+        const userInput = prompt("Nhập một số bất kỳ:");
+
+        // Chuyển đổi đầu vào thành số nguyên
+        const num = parseInt(userInput);
+
+        // Kiểm tra hợp lệ và in kết quả
+        if (!isNaN(num)) {
+            document.write(checkEvenOdd(num));
+        } else {
+            document.write("Vui lòng nhập một số hợp lệ!");6
+        }
+    </script>
+</body>
+</html>
