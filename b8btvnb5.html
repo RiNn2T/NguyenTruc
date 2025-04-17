@@ -4,111 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slide Show Ảnh</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f5f5f5;
-        }
-        .slideshow-container {
-            position: relative;
-            max-width: 800px;
-            width: 100%;
-            margin: auto;
-            text-align: center;
-        }
-        .slide {
-            display: none;
-            width: 100%;
-        }
-        .slide img {
-            width: 100%;
-            max-height: 500px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-        .caption {
-            color: #333;
-            font-size: 20px;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 8px;
-            width: 100%;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.7);
-        }
-        .dot-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-        .active, .dot:hover {
-            background-color: #717171;
-        }
-    </style>
+    <link rel="stylesheet" href="b8btvnb5.css">
 </head>
 <body>
     <div class="slideshow-container">
         <div class="slide fade">
-            <img src="https://via.placeholder.com/800x500?text=Ảnh+1" alt="Ảnh 1">
-            <div class="caption">Ảnh 1</div>
+            <img src="https://scontent-hkg1-2.xx.fbcdn.net/v/t39.30808-6/481770485_618231797767641_5445255989455152243_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFUpwUmFH5HYSD3CcnRy1431eW9fg3quK3V5b1-Deq4rRdO6siyIAEjJoJSSSSp3b7082kxKCcjYvh5y_YQOL3V&_nc_ohc=DdwMxhaboRkQ7kNvwH3VqTC&_nc_oc=Adk_wT7T2Ex9NxHd7jai846pbJ0gT4oRF5AXD5_1jOhDKh7TVSQQCihicrj-toLVs47WNAz6hoSYNl6m3cUbzwEx&_nc_zt=23&_nc_ht=scontent-hkg1-2.xx&_nc_gid=TsayspAB9pOpWra7eWqfLQ&oh=00_AfGpmtCLSD_G8WT4lS0g9Dv0O5-EGmKKWUF90mP9BUDNOw&oe=6806CADB" alt="Ảnh 1">
         </div>
-        
         <div class="slide fade">
-            <img src="https://via.placeholder.com/800x500?text=Ảnh+2" alt="Ảnh 2">
-            <div class="caption">Ảnh 2</div>
+            <img src="https://cafefcdn.com/thumb_w/640/203337114487263232/2022/3/3/photo1646280815645-1646280816151764748403.jpg" alt="Ảnh 2">
         </div>
-        
         <div class="slide fade">
-            <img src="https://via.placeholder.com/800x500?text=Ảnh+3" alt="Ảnh 3">
-            <div class="caption">Ảnh 3</div>
+            <img src="https://kpethouse.com/wp-content/uploads/2023/05/Avatar-cute-meo.jpg" alt="Ảnh 3">
         </div>
-        
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
+        <div class="slide fade">
+            <img src="https://file.hstatic.net/200000491469/file/image-3-4_3fc887c9cc6340d696c7460cdd273d12_large.jpg" alt="Ảnh 4">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    
-    <div class="dot-container">
+
+    <div class="dots-container">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
     </div>
 
     <script src="b8btvnb5.js"></script>
