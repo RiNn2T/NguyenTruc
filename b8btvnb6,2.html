@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phép tính và màu sắc</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .calculator {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        input, select, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Thực hiện phép tính</h2>
+        <input type="number" id="num1" placeholder="Số thứ nhất">
+        <select id="operator">
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">×</option>
+            <option value="divide">÷</option>
+        </select>
+        <input type="number" id="num2" placeholder="Số thứ hai">
+        <button onclick="calculate()">Tính</button>
+        <div id="result">Kết quả sẽ hiển thị ở đây</div>
+    </div>
+
+    <script src="b8btvnb6,2.js"></script>
+</body>
+</html>
