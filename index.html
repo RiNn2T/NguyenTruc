@@ -1,42 +1,561 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ của tôi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nguyễn Trần Thanh Trúc - Portfolio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #121212;
+      --secondary: #1e1e1e;
+      --accent: #3a86ff;
+      --text: #e0e0e0;
+      --text-light: #b0b0b0;
+      --border: #333;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background-color: var(--primary);
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      text-align: center;
+      padding: 60px 0 40px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 3px;
+      background: var(--accent);
+    }
+    
+    header img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--secondary);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      margin-bottom: 25px;
+      transition: all 0.3s ease;
+    }
+    
+    header img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(58, 134, 255, 0.3);
+    }
+    
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--text-light);
+      margin-bottom: 5px;
+      font-weight: 400;
+    }
+    
+    section {
+      background-color: var(--secondary);
+      padding: 40px;
+      margin-bottom: 40px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      border-left: 4px solid var(--accent);
+    }
+    
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--border);
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 1px;
+      position: relative;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100px;
+      height: 3px;
+      background: var(--accent);
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+      margin: 30px 0 20px;
+      color: #fff;
+      font-weight: 500;
+    }
+    
+    p, li {
+      margin-bottom: 15px;
+      color: var(--text-light);
+      font-weight: 300;
+    }
+    
+    ul {
+      margin-left: 25px;
+    }
+    
+    li {
+      margin-bottom: 10px;
+      position: relative;
+    }
+    
+    li::before {
+      content: '▹';
+      position: absolute;
+      left: -20px;
+      color: var(--accent);
+    }
+    
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    
+    .skill-category {
+      flex: 1;
+      min-width: 250px;
+      background: rgba(58, 134, 255, 0.1);
+      padding: 20px;
+      border-radius: 6px;
+      border-top: 2px solid var(--accent);
+    }
+    
+    .skill-category h3 {
+      color: var(--accent);
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+    
+    .project {
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed var(--border);
+    }
+    
+    .project:last-child {
+      border-bottom: none;
+    }
+    
+    .project h3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .project-date {
+      font-size: 1rem;
+      color: var(--accent);
+      background: rgba(58, 134, 255, 0.1);
+      padding: 5px 10px;
+      border-radius: 20px;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    
+    .contact-item {
+      flex: 1;
+      min-width: 250px;
+      background: rgba(58, 134, 255, 0.1);
+      padding: 20px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(58, 134, 255, 0.2);
+    }
+    
+    .contact-item i {
+      margin-right: 10px;
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+    
+    .contact-item a {
+      color: var(--text-light);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .contact-item a:hover {
+      color: var(--accent);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 30px;
+      margin-top: 50px;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+    
+    #backToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      background-color: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(58, 134, 255, 0.4);
+      z-index: 1000;
+      transition: all 0.3s;
+    }
+    
+    #backToTopBtn:hover {
+      background-color: #fff;
+      color: var(--accent);
+      transform: translateY(-3px);
+    }
+    
+    /* Homework Section */
+    #Homework {
+      position: relative;
+    }
+    
+    .homework-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    
+    .homework-session {
+      flex: 1;
+      min-width: 250px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 25px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      border-top: 2px solid var(--accent);
+    }
+    
+    .homework-session:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(58, 134, 255, 0.2);
+    }
+    
+    .homework-session h1 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: #fff;
+      text-align: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .homework-session a {
+      display: block;
+      color: var(--text-light);
+      text-decoration: none;
+      margin-bottom: 10px;
+      padding: 8px 0;
+      transition: all 0.3s;
+      position: relative;
+      padding-left: 20px;
+    }
+    
+    .homework-session a::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      transition: all 0.3s;
+    }
+    
+    .homework-session a:hover {
+      color: var(--accent);
+      transform: translateX(5px);
+    }
+    
+    .homework-session a:hover::before {
+      transform: translateX(5px);
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      
+      h2 {
+        font-size: 1.6rem;
+      }
+      
+      section {
+        padding: 30px 20px;
+      }
+      
+      .skills-container, 
+      .contact-info,
+      .homework-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .skill-category,
+      .contact-item,
+      .homework-session {
+        min-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Buổi 1</h1>
-    <p><a href="Buổi 1 b1.html">Bài 1</a><br/>
-        <a href="Buổi 1 b2.html">Bài 2.1</a><br/>
-        <a href="Buổi 1 b2b.html">Bài 2.2</a><br/>
+  <header>
+    <img src="https://scontent.fhan3-2.fna.fbcdn.net/v/t39.30808-6/487519146_1711365163061750_4247850790417865936_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFtopvKRYr_xFXX-L2b2cIaYerDABKdin9h6sMAEp2Kf_ufc8RCci12F_OQIRLWH2McxifCf0GfeIzMbyAOx_OR&_nc_ohc=7MA0dspE_EkQ7kNvwEi1pZU&_nc_oc=AdlejXXFCzfA8DzqIaRWPt6J2BKXsKZ99paJOzlPR1D_jGWLotbLQ_P1abHWh8GSQlCbpmFM-Ghb50AQOVy_CY8R&_nc_zt=23&_nc_ht=scontent.fhan3-2.fna&_nc_gid=ybpzXjq_qAI02eUMkRIo0w&oh=00_AfGgZYU9S0Il4FpCPQ_SFJzp3v90AIoZ0rHr6FJU8Tyb5g&oe=68079670" alt="Nguyễn Trần Thanh Trúc">
+    <h1>NGUYỄN TRẦN THANH TRÚC</h1>
+    <p class="subtitle">Sinh viên Công nghệ Thông tin - Đại học Thủ đô Hà Nội</p>
+    <p class="subtitle">Sinh viên Luật - Đại học Thủ đô Hà Nội</p>
+  </header>
+
+  <section id="about">
+    <h2>GIỚI THIỆU</h2>
+    <p>Xin chào! Tôi là Thanh Trúc, một sinh viên đam mê công nghệ và sáng tạo. Với niềm yêu thích đặc biệt dành cho lập trình và thiết kế, tôi luôn tìm cách kết hợp giữa tính thẩm mỹ và kỹ thuật trong mọi sản phẩm của mình.</p>
+    
+    <h3>Mục tiêu nghề nghiệp</h3>
+    <p>Trở thành một lập trình viên full-stack có khả năng thiết kế và phát triển các ứng dụng web, di động chất lượng cao. Đặc biệt quan tâm đến lĩnh vực phát triển game và phần mềm công nghệ.</p>
+    
+    <h3>Sở thích</h3>
+    <ul>
+      <li>Lập trình và phát triển phần mềm</li>
+      <li>An ninh mạng</li>
+      <li>Phát triển game indie</li>
+      <li>Nghiên cứu công nghệ mới</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>HỌC VẤN</h2>
+    
+    <div class="project">
+      <h3>Đại học Thủ đô Hà Nội <span class="project-date">2024 - Hiện tại</span></h3>
+      <p>Chuyên ngành 1: Công nghệ Thông tin</p>
+      <p>Chuyên ngành 2: Luật</p>
+      <p>Điểm trung bình: 3.2/4.0</p>
+      <p>Các môn học chính: Lập trình C/C++, Cấu trúc dữ liệu và giải thuật, Lập trình hướng đối tượng, Cơ sở dữ liệu, Thiết kế web.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>KỸ NĂNG</h2>
+    
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>Kỹ thuật</h3>
+        <ul>
+          <li>Lập trình C/C++ (Trung cấp)</li>
+          <li>Java (Cơ bản)</li>
+          <li>HTML/CSS (Trung cấp)</li>
+          <li>JavaScript (Cơ bản)</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Thiết kế</h3>
+        <ul>
+          <li>Thiết kế UI/UX cơ bản</li>
+          <li>Adobe Photoshop</li>
+          <li>Adobe Illustrator</li>
+          <li>Thiết kế nội thất</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Mềm</h3>
+        <ul>
+          <li>Làm việc nhóm</li>
+          <li>Giải quyết vấn đề</li>
+          <li>Quản lý thời gian</li>
+          <li>Giao tiếp hiệu quả</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>DỰ ÁN & THÀNH TÍCH</h2>
+    
+    <div class="project">
+      <h3>Website cá nhân <span class="project-date">2025</span></h3>
+      <p>Thiết kế và phát triển website giới thiệu bản thân sử dụng HTML, CSS và JavaScript.</p>
+      <p>Đặc điểm nổi bật: Responsive design, giao diện tối giản, hiệu ứng scroll mượt mà.</p>
+    </div>
+    
+    <div class="project">
+      <h3>Mang cơm cho em <span class="project-date">2022-2024</span></h3>
+      <p>Là dự án hướng tới các bé và người dân vùng cao có hoàn cảnh khó khăn.</p>
+      <p>Đảm nhiệm: Tình nguyện viên, người đồng hành...</p>
+    </div>
+    
+    <div class="project">
+      <h3>3 lần đạt giải nhất, 5 lần đạt giải nhì cuộc thi cầu lông/bóng bàn <span class="project-date">2016-2021</span></h3>
+      <p>Giải nhất: đơn nữ cấp trường, huyện.</p>
+      <p>Giải nhì: đơn/đôi nữ cấp huyện, thành phố.</p>
+    </div>
+  </section>
+
+  <section id="goals">
+    <h2>MỤC TIÊU PHÁT TRIỂN</h2>
+    
+    <h3>Ngắn hạn (6-12 tháng)</h3>
+    <ul>
+      <li>Hoàn thành khóa học thiết kế web</li>
+      <li>Phát triển thành thạo JavaScript và framework React</li>
+      <li>Xây dựng portfolio với 3 dự án cá nhân chất lượng</li>
+    </ul>
+    
+    <h3>Dài hạn (3-5 năm)</h3>
+    <ul>
+      <li>Trở thành lập trình viên full-stack chuyên nghiệp</li>
+      <li>Thành lập nhóm phát triển công nghệ máy tính/phần mềm</li>
+      <li>Phát triển ứng dụng VR/AR thương mại</li>
+    </ul>
+  </section>
+
+  <section id="Homework">
+    <h2>BÀI TẬP ĐÃ HOÀN THÀNH</h2>
+    
+    <div class="homework-container">
+      <div class="homework-session">
+        <h1>Buổi 1</h1>
+        <a href="Buổi 1 b1.html">Bài 1</a>
+        <a href="Buổi 1 b2.html">Bài 2.1</a>
+        <a href="Buổi 1 b2b.html">Bài 2.2</a>
         <a href="Buổi 1 b3.html">Bài 3</a>
-    </p>
-    <h1>Buổi 5</h1>
-    <p><a href="Bài 1.html">Bài 1</a><br/>
+      </div>
+      
+      <div class="homework-session">
+        <h1>Buổi 5</h1>
+        <a href="Bài 1.html">Bài 1</a>
         <a href="Bài 2.html">Bài 2</a>
-    </p>
-    <h1>Buổi 6</h1>
-    <p><a href="baitrenlopb6.html">Bài 1</a><br/>
-        <a href="bài 1 b6 lab 6.html">Bài 1 lab 6</a><br/>
+      </div>
+      
+      <div class="homework-session">
+        <h1>Buổi 6</h1>
+        <a href="baitrenlopb6.html">Bài 1</a>
+        <a href="bài 1 b6 lab 6.html">Bài 1 lab 6</a>
         <a href="bài 2 b6 lab 6.html">Bài 2 lab 6</a>
-    </p>
-    <h1>Buổi 7</h1>
-    <p><a href="B7b1.html">Bài 1</a><br/>
-        <a href="B7b2klab6.html">Bài 2 khlab 6</a><br/>
+      </div>
+      
+      <div class="homework-session">
+        <h1>Buổi 7</h1>
+        <a href="B7b1.html">Bài 1</a>
+        <a href="B7b2klab6.html">Bài 2 khlab 6</a>
         <a href="B7b2.html">Bài 2</a>
-    </p>
-    <h1>Buổi 8</h1>
-    <p><a href="b8b1c1.html">Bài 1</a><br/>
-        <a href="b8b1c2.html">Bài 1</a><br/>
-        <a href="b8b2.html">Bài 2</a><br/>
+      </div>
+      
+      <div class="homework-session">
+        <h1>Buổi 8</h1>
+        <a href="b8b1c1.html">Bài 1</a>
+        <a href="b8b1c2.html">Bài 1</a>
+        <a href="b8b2.html">Bài 2</a>
         <a href="b8b3.html">Bài 3</a>
-    </p>
-    <h1>Buổi 9</h1>
-    <p><a href="b8btvnb4.html">Bài 4</a><br/>
-        <a href="b8btvnb5.html">Bài 5</a><br/>
-        <a href="b8btvnb6,1.html">Bài 6.1</a><br/>
+      </div>
+      
+      <div class="homework-session">
+        <h1>Buổi 9</h1>
+        <a href="b8btvnb4.html">Bài 4</a>
+        <a href="b8btvnb5.html">Bài 5</a>
+        <a href="b8btvnb6,1.html">Bài 6.1</a>
         <a href="b8btvnb6,2.html">Bài 6.2</a>
-    </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>LIÊN HỆ</h2>
+    
+    <div class="contact-info">
+      <div class="contact-item">
+        <h3><i class="fas fa-envelope"></i> Email</h3>
+        <p>anhhangtruchung@gmail.com</p>
+      </div>
+      
+      <div class="contact-item">
+        <h3><i class="fas fa-phone"></i> Điện thoại</h3>
+        <p>+84 989 340 057</p>
+      </div>
+      
+      <div class="contact-item">
+        <h3><i class="fas fa-globe"></i> Mạng xã hội</h3>
+        <p><a href="https://web.facebook.com/2t.rinn"><i class="fab fa-facebook"></i> Nguyễnn Trúcc</a></p>
+        <p><a href="https://rinn2t.github.io/NguyenTruc/"><i class="fab fa-github"></i> github of NguyenTruc</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Nguyễn Trần Thanh Trúc. All rights reserved.</p>
+  </footer>
+
+  <button onclick="scrollToTop()" id="backToTopBtn" title="Lên đầu trang"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    // Hiển thị nút back to top khi scroll
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("backToTopBtn").style.display = "flex";
+        document.getElementById("backToTopBtn").style.justifyContent = "center";
+        document.getElementById("backToTopBtn").style.alignItems = "center";
+      } else {
+        document.getElementById("backToTopBtn").style.display = "none";
+      }
+    };
+
+    // Cuộn mượt lên đầu trang
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  </script>
 </body>
 </html>
