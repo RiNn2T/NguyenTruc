@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Menu đa cấp</title>
+    <style>
+      body {
+        font-family: Arial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .menu {
+        position: relative;
+        display: inline-block;
+      }
+
+      .menu-button {
+        background-color: #1976d2;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #f1f1f1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .submenu a {
+        padding: 10px 20px;
+        display: block;
+        color: black;
+        text-decoration: none;
+      }
+
+      .submenu a:hover {
+        background-color: #ddd;
+      }
+      .back-home {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: var(--secondary-color);
+        color: var(--white);
+        text-decoration: none;
+        border-radius: 25px;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+
+      .back-home:hover {
+        background-color: lightgrey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <button class="menu-button" onclick="toggleMenu()">Thiết kế web</button>
+      <div class="submenu" id="submenu">
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">Javascript</a>
+        <a href="#">PHP</a>
+        <a href="#">Python</a>
+        <a href="#">Java</a>
+        <a href="#">C#</a>
+        <a href="#">C++</a>
+      </div>
+    </div>
+    <section id="trangchu" class="fade-in">
+      <div class="container">
+        <b><a href="index.html" class="back-home">Quay về trang chủ</a></b>
+      </div>
+    </section>
+    <script>
+      function toggleMenu() {
+        const submenu = document.getElementById("submenu");
+        submenu.style.display =
+          submenu.style.display === "block" ? "none" : "block";
+      }
+
+      // Đóng menu nếu click ra ngoài
+      document.addEventListener("click", function (event) {
+        const menu = document.querySelector(".menu");
+        const submenu = document.getElementById("submenu");
+        if (!menu.contains(event.target)) {
+          submenu.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
