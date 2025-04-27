@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Boxes</title>
+    <style>
+        .color-boxes {
+            display: flex;
+            gap: 20px;
+            margin: 30px;
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        #red-box {
+            background-color: red;
+        }
+        
+        #blue-box {
+            background-color: blue;
+        }
+        
+        #green-box {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="color-boxes">
+        <div id="red-box" class="box">Red Box</div>
+        <div id="blue-box" class="box">Blue Box</div>
+        <div id="green-box" class="box">Green Box</div>
+    </div>
+</body>
+</html>
