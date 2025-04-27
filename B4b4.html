@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang cá nhân của Tôi</title>
+    <link rel="stylesheet" href="personal-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="B4b4.css">
+</head>
+<body>
+    <div id="personal-container">
+        <header id="personal-header">
+            <div class="profile-picture">
+                <img src="profile.jpg" alt="Ảnh đại diện">
+            </div>
+            <h1>Nguyễn Văn A</h1>
+            <p class="tagline">Lập trình viên Web & Nhà thiết kế UI/UX</p>
+        </header>
+        
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#skills">Kỹ năng</a></li>
+                <li><a href="#projects">Dự án</a></li>
+                <li><a href="#education">Học vấn</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+                <li><a href="#exercises">Bài tập</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <section id="about" class="section-box">
+                <h2><i class="fas fa-user"></i> Giới thiệu</h2>
+                <p>Xin chào! Tôi là một lập trình viên web với 3 năm kinh nghiệm trong việc phát triển các ứng dụng web hiện đại. Tôi đam mê tạo ra những trải nghiệm người dùng tuyệt vời và giải quyết các vấn đề phức tạp bằng code.</p>
+                <p>Sở thích của tôi bao gồm đọc sách công nghệ, tham gia các cộng đồng lập trình và khám phá các xu hướng thiết kế mới.</p>
+            </section>
+            
+            <section id="skills" class="section-box">
+                <h2><i class="fas fa-code"></i> Kỹ năng</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Front-end</h3>
+                        <ul>
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React.js</li>
+                            <li>Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Back-end</h3>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>PHP</li>
+                            <li>MySQL</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Khác</h3>
+                        <ul>
+                            <li>UI/UX Design</li>
+                            <li>Git</li>
+                            <li>Docker</li>
+                            <li>SEO cơ bản</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="projects" class="section-box">
+                <h2><i class="fas fa-project-diagram"></i> Dự án</h2>
+                <div class="project">
+                    <h3>Hệ thống quản lý thư viện</h3>
+                    <p>Một hệ thống quản lý thư viện trực tuyến với đầy đủ chức năng mượn/trả sách, quản lý thành viên và thống kê.</p>
+                    <p><strong>Công nghệ:</strong> React, Node.js, MongoDB</p>
+                </div>
+                <div class="project">
+                    <h3>Website bán hàng thời trang</h3>
+                    <p>Thiết kế và phát triển website thương mại điện tử cho cửa hàng thời trang với hệ thống thanh toán trực tuyến.</p>
+                    <p><strong>Công nghệ:</strong> Vue.js, Laravel, MySQL</p>
+                </div>
+            </section>
+            
+            <section id="education" class="section-box">
+                <h2><i class="fas fa-graduation-cap"></i> Học vấn</h2>
+                <div class="education-item">
+                    <h3>Đại học Công nghệ Thông tin</h3>
+                    <p class="degree">Cử nhân Khoa học Máy tính</p>
+                    <p class="date">2018 - 2022</p>
+                    <p>Chuyên ngành: Phát triển phần mềm và ứng dụng web</p>
+                </div>
+                <div class="education-item">
+                    <h3>Khóa học Thiết kế UI/UX</h3>
+                    <p class="degree">Chứng chỉ</p>
+                    <p class="date">2021</p>
+                    <p>Học viện Thiết kế Creative</p>
+                </div>
+            </section>
+            
+            <section id="exercises" class="section-box">
+                <h2><i class="fas fa-laptop-code"></i> Bài tập học phần</h2>
+                <ul class="exercise-list">
+                    <li><a href="buoi1.html">Bài tập Buổi 1: HTML cơ bản</a></li>
+                    <li><a href="buoi2.html">Bài tập Buổi 2: CSS cơ bản</a></li>
+                    <li><a href="buoi3.html">Bài tập Buổi 3: Class, ID và Box Model</a></li>
+                </ul>
+            </section>
+        </main>
+        
+        <footer id="contact" class="section-box">
+            <h2><i class="fas fa-envelope"></i> Liên hệ</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> email@example.com</p>
+                <p><i class="fas fa-phone"></i> 0123 456 789</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2023 Nguyễn Văn A. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
