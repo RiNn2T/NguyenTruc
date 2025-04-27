@@ -1,0 +1,86 @@
+/* w3schools-style.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+.w3-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #4CAF50;
+    font-size: 36px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #4CAF50;
+    font-size: 24px;
+    margin: 25px 0 15px;
+}
+
+.w3-example {
+    background-color: #f8f9fa;
+    border-left: 4px solid #4CAF50;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.w3-example h3 {
+    margin-top: 0;
+    color: #4CAF50;
+}
+
+.w3-code {
+    font-family: Consolas, monospace;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    overflow: auto;
+}
+
+.w3-panel {
+    padding: 15px;
+    margin: 20px 0;
+    border-left: 4px solid #ff9800;
+}
+
+.w3-note {
+    background-color: #ffffcc;
+}
+
+.w3-table-all {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.w3-table-all th, .w3-table-all td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.w3-table-all th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.w3-table-all tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.w3-table-all tr:hover {
+    background-color: #ddd;
+}
